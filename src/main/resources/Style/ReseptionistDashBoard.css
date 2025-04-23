@@ -1,0 +1,165 @@
+/* Main Color Palette */
+.root {
+    -fx-primary-color: #4a6fa5;
+    -fx-secondary-color: #166088;
+    -fx-accent-color: #4ec9b0;
+    -fx-dark-text: #333333;
+    -fx-light-text: #ffffff;
+    -fx-light-gray: #f8f9fa;
+    -fx-medium-gray: #e9ecef;
+    -fx-dark-gray: #6c757d;
+    -fx-danger: #e63946;
+    -fx-success: #2a9d8f;
+    -fx-warning: #f4a261;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Main Layout */
+.content-area {
+    -fx-background-color: -fx-light-gray;
+}
+
+/* Side Navigation Panel */
+.side-panel {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.sidebar-header {
+    -fx-background-color: -fx-primary-color;
+}
+
+.sidebar-title {
+    -fx-text-fill: -fx-light-text;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-light-text;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-cursor: hand;
+}
+
+.nav-button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-button {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 5;
+    -fx-text-fill: -fx-light-text;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.logout-button:hover {
+    -fx-background-color: -fx-danger;
+    -fx-cursor: hand;
+}
+
+/* Top Bar */
+.top-bar {
+    -fx-background-color: -fx-light-text;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 20 0 20;
+}
+
+.welcome-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+.receptionist-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.date-display {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+/* Dashboard Elements */
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-secondary-color;
+}
+
+/* Stats Cards */
+.stat-card {
+    -fx-background-color: -fx-light-text;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-padding: 15;
+}
+
+.stat-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+.stat-value {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.stat-change {
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-background-color: -fx-accent-color;
+    -fx-text-fill: -fx-light-text;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+}
+
+.action-button:hover {
+    -fx-background-color: derive(-fx-accent-color, -10%);
+    -fx-cursor: hand;
+}
+
+.action-button:pressed {
+    -fx-background-color: derive(-fx-accent-color, -20%);
+}
+
+/* Footer */
+.footer {
+    -fx-background-color: -fx-light-text;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: -fx-dark-gray;
+    -fx-font-size: 12px;
+}

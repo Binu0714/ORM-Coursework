@@ -1,0 +1,377 @@
+/* User.css - Responsive CSS for User Role Management Interface */
+
+/* Root and Global Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+}
+
+/* Main Container - Full size StackPane */
+.main-container {
+    -fx-background-color: #f5f7fa;
+    -fx-spacing: 20;
+    -fx-padding: 20;
+    -fx-pref-width: 884px;
+    -fx-pref-height: 650px;
+}
+
+/* Header Section */
+.header-section {
+    -fx-background-color: #3f51b5;
+    -fx-padding: 20px 25px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 3);
+    -fx-alignment: center-left;
+    -fx-pref-height: 70px;
+    -fx-min-height: 70px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Input Section */
+.input-grid {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-padding: 20;
+    -fx-pref-height: 180px;
+}
+
+.input-container {
+    -fx-padding: 5 0;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+.input-field {
+    -fx-background-color: #f8f9fc;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+}
+
+.input-field:focused {
+    -fx-border-color: #3f51b5;
+    -fx-background-color: white;
+}
+
+/* ComboBox Styling */
+.combo-box {
+    -fx-background-color: #f8f9fc;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-pref-height: 35px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3f51b5;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 8px 10px;
+    -fx-text-fill: #333;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #3f51b5;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+}
+
+/* Table Styling */
+.table-container {
+    -fx-padding: 20 0;
+    -fx-pref-height: 300px;
+}
+
+.user-table {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-min-height: 250px;
+}
+
+.user-table .column-header-background {
+    -fx-background-color: #3f51b5;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.user-table .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.user-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Column widths to match your layout */
+.user-table .table-column {
+    -fx-pref-width: 200px; /* Default column width */
+}
+
+.user-table #userIdColumn {
+    -fx-pref-width: 150px;
+}
+
+.user-table #nameColumn {
+    -fx-pref-width: 200px;
+}
+
+.user-table #emailColumn {
+    -fx-pref-width: 250px;
+}
+
+.user-table #roleColumn {
+    -fx-pref-width: 180px;
+}
+
+.user-table .table-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 12px;
+}
+
+.user-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.user-table .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #3f51b5;
+}
+
+.user-table .table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.table-placeholder {
+    -fx-text-fill: #757575;
+    -fx-font-style: italic;
+}
+
+/* Button Styling */
+.button-container {
+    -fx-spacing: 15;
+    -fx-padding: 10 0 20 0;
+    -fx-alignment: center;
+    -fx-pref-height: 60px;
+    -fx-min-height: 60px;
+}
+
+.action-button {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 25px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-min-width: 100px;
+    -fx-pref-height: 40px;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50; /* Green */
+}
+
+.save-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.update-button {
+    -fx-background-color: #2196F3; /* Blue */
+}
+
+.update-button:hover {
+    -fx-background-color: #0b7dda;
+}
+
+.delete-button {
+    -fx-background-color: #f44336; /* Red */
+}
+
+.delete-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.reset-button {
+    -fx-background-color: #ff9800; /* Orange */
+}
+
+.reset-button:hover {
+    -fx-background-color: #e68a00;
+}
+
+/* Responsive Design Media Queries */
+/* For screens smaller than 900px */
+@media screen and (max-width: 900px) {
+    .main-container {
+        -fx-pref-width: 100%;
+    }
+
+    .user-table .table-column {
+        -fx-pref-width: 150px;
+    }
+
+    .user-table #emailColumn {
+        -fx-pref-width: 200px;
+    }
+}
+
+/* For screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    .root {
+        -fx-font-size: 12px;
+    }
+
+    .main-container {
+        -fx-padding: 10;
+        -fx-spacing: 15;
+    }
+
+    .header-section {
+        -fx-padding: 15px;
+        -fx-pref-height: 60px;
+        -fx-min-height: 60px;
+    }
+
+    .title-label {
+        -fx-font-size: 20px;
+    }
+
+    .input-grid {
+        -fx-padding: 15;
+        -fx-pref-height: 160px;
+    }
+
+    .field-label {
+        -fx-font-size: 11px;
+    }
+
+    .input-field, .combo-box {
+        -fx-padding: 8px;
+        -fx-font-size: 12px;
+        -fx-pref-height: 30px;
+    }
+
+    .action-button {
+        -fx-font-size: 11px;
+        -fx-padding: 8px 16px;
+        -fx-min-width: 80px;
+        -fx-pref-height: 35px;
+    }
+
+    .user-table .table-cell {
+        -fx-padding: 8px;
+    }
+
+    .user-table .table-column {
+        -fx-pref-width: 120px;
+    }
+
+    .user-table #userIdColumn {
+        -fx-pref-width: 100px;
+    }
+
+    .user-table #emailColumn {
+        -fx-pref-width: 180px;
+    }
+
+    .button-container {
+        -fx-pref-height: 50px;
+        -fx-min-height: 50px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 600px) {
+    .main-container {
+        -fx-padding: 5;
+        -fx-spacing: 10;
+    }
+
+    .input-grid {
+        -fx-padding: 10;
+        -fx-hgap: 10;
+        -fx-vgap: 10;
+        -fx-pref-height: 200px;
+    }
+
+    .button-container {
+        -fx-spacing: 8;
+        -fx-pref-height: 45px;
+        -fx-min-height: 45px;
+    }
+
+    .action-button {
+        -fx-padding: 6px 12px;
+        -fx-font-size: 10px;
+        -fx-min-width: 70px;
+        -fx-pref-height: 30px;
+    }
+
+    .user-table .table-cell {
+        -fx-padding: 6px;
+    }
+
+    .user-table .table-column {
+        -fx-pref-width: 100px;
+    }
+
+    .user-table #userIdColumn {
+        -fx-pref-width: 80px;
+    }
+
+    .user-table #nameColumn {
+        -fx-pref-width: 120px;
+    }
+
+    .user-table #emailColumn {
+        -fx-pref-width: 150px;
+    }
+
+    .user-table #roleColumn {
+        -fx-pref-width: 100px;
+    }
+}
+
+/* Transitions and Animations */
+.action-button {
+    -fx-transition: -fx-background-color 0.3s;
+}
+
+.input-field, .combo-box {
+    -fx-transition: -fx-border-color 0.2s;
+}
+
+/* Hover Effects */
+.input-grid:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 12, 0, 0, 6);
+}

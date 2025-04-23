@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="518.0" prefWidth="666.0" styleClass="main-pane" stylesheets="@../Style/TrackShedule.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.TrackScheduleController">
+
+    <children>
+        <!-- Header -->
+        <Label layoutX="30.0" layoutY="30.0" styleClass="header-label" text="Track Therapist Schedule" />
+
+        <!-- Therapist Selection Section -->
+        <VBox layoutX="30.0" layoutY="93.0" spacing="10.0" />
+
+        <!-- Therapist Selection Label -->
+        <Label layoutX="33.0" layoutY="95.0" styleClass="section-label" text="Select Therapist" />
+
+        <!-- Therapist ID Selection -->
+        <HBox layoutX="32.0" layoutY="129.0" spacing="20.0">
+            <children>
+                <Label styleClass="field-label" text="Therapist ID:" />
+                <ComboBox fx:id="cmbTherapistId" onAction="#cmbTherapistIdOnAction" prefHeight="30.0" prefWidth="202.0" styleClass="combo-box" />
+            </children>
+        </HBox>
+
+        <!-- Therapist Name Section -->
+        <HBox layoutX="30.0" layoutY="180.0" spacing="20.0">
+            <children>
+                <Label styleClass="field-label" text="Therapist Name:" />
+                <Label fx:id="lblTherapistName" prefHeight="20.0" prefWidth="178.0" styleClass="data-label" />
+            </children>
+        </HBox>
+
+        <!-- Action Buttons -->
+        <HBox layoutX="30.0" layoutY="230.0" spacing="15.0">
+            <children>
+                <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="35.0" prefWidth="100.0" styleClass="primary-button" text="Search" />
+
+                <Button fx:id="btnClearSelection" mnemonicParsing="false" onAction="#btnClearSelectionOnAction" prefHeight="35.0" prefWidth="100.0" styleClass="secondary-button" text="Clear" />
+            </children>
+        </HBox>
+
+        <!-- Sessions Table -->
+        <TableView fx:id="tblTherapistSessions" layoutX="30.0" layoutY="300.0" prefHeight="186.0" prefWidth="606.0">
+            <columns>
+                <TableColumn fx:id="colSessionId" prefWidth="78.0" text="Session ID" />
+                <TableColumn fx:id="colPatientId" prefWidth="96.0" text="Patient ID" />
+                <TableColumn fx:id="colProgramId" prefWidth="100.0" text="Program ID" />
+                <TableColumn fx:id="colSessionDate" prefWidth="107.0" text="Date" />
+                <TableColumn fx:id="colSessionTime" prefWidth="102.0" text="Time" />
+                <TableColumn fx:id="colSessionStatus" prefWidth="123.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

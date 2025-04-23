@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #f4f4f4;" stylesheets="@../Style/AdminDashBoard.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.AdminDashBoardController">
+
+    <!-- Left Sidebar with Responsive Design -->
+    <left>
+        <VBox fx:id="sideBar" alignment="TOP_CENTER" prefWidth="250.0" spacing="10" styleClass="vbox">
+            <padding>
+                <Insets bottom="20" left="15" right="15" top="30" />
+            </padding>
+
+            <!-- Logo/Title Section -->
+            <HBox alignment="CENTER" spacing="10">
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/seri.jpeg" />
+                    </image>
+                </ImageView>
+
+                <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2E3B55;" text="HealthCare">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- Divider -->
+            <Rectangle fill="#e0e0e0" height="1.0" width="220" />
+
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #2E3B55; -fx-opacity: 0.8;" text="MAIN MENU" />
+
+            <!-- Navigation Menu -->
+            <VBox spacing="8">
+                <Button fx:id="dashboardBtn" onAction="#handleDashboard" styleClass="nav-button, active" text="📊 Dashboard" />
+                <Button fx:id="userMnagement" onAction="#handleUserManagement" styleClass="nav-button" text="👥 User Management" />
+                <Button fx:id="therapyManagement" onAction="#handleTherapistManagement" styleClass="nav-button" text="🩺 Therapist Management" />
+                <Button fx:id="program" onAction="#btnprogram" styleClass="nav-button" text="📋 Therapy Program" />
+                <Button fx:id="PatientManagement" onAction="#handlePatientManagement" styleClass="nav-button" text="🏥 Patient Management" />
+                <Button fx:id="TherapySessionScheduling" onAction="#handleTherapySessionScheduling" styleClass="nav-button" text="🗓️ Session Scheduling" />
+                <Button fx:id="PaymentInvoiceManagement" onAction="#handlePaymentInvoiceManagement" styleClass="nav-button" text="💰 Payment and Invoices" />
+                <Button fx:id="ReportingAnalytics" onAction="#handleReportingAnalytics" styleClass="nav-button" text="📈 Reporting and Analytics" />
+                <Button fx:id="settings" onAction="#handleSettings" styleClass="nav-button" text="⚙️ Settings" />
+            </VBox>
+
+            <VBox spacing="8" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets top="30" />
+                </VBox.margin>
+                <Button fx:id="logout" onAction="#handleLogOut" styleClass="logout-button" text="🚪 Log Out" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Center Section: Dashboard Content (Scrollable) -->
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;">
+            <AnchorPane fx:id="AncMain" styleClass="anchor-pane">
+                <!-- Dashboard Header -->
+                <HBox alignment="CENTER_LEFT" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+                    <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2E3B55;" styleClass="fade-in" text="Dashboard Overview" />
+                    <HBox alignment="CENTER_RIGHT" spacing="15" HBox.hgrow="ALWAYS">
+                        <Label fx:id="dateLabel" style="-fx-font-size: 14px; -fx-text-fill: #2E3B55;" text="April 21, 2025" />
+                    </HBox>
+                </HBox>
+
+                <!-- Welcome Message -->
+                <HBox alignment="CENTER_LEFT" layoutX="20" layoutY="60" prefHeight="60" prefWidth="800" styleClass="card">
+                    <Label fx:id="welcomeLabel" style="-fx-font-size: 16px; -fx-font-weight: normal; -fx-text-fill: #2E3B55;" text="Welcome back, Sandaru! Here's what's happening in your clinic today." />
+                </HBox>
+
+                <!-- Stats Cards Section (Responsive Grid) -->
+                <GridPane hgap="15" layoutX="20" layoutY="140" prefWidth="800" vgap="15" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+
+                    <!-- Card 1: Users -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="0">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Total Users" />
+                        <Label fx:id="totalUsersLabel" styleClass="card-value" text="125" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="+12% from last month" />
+                    </VBox>
+
+                    <!-- Card 2: Therapists -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="1">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Total Therapists" />
+                        <Label fx:id="totalTherapistsLabel" styleClass="card-value" text="42" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="+5% from last month" />
+                    </VBox>
+
+                    <!-- Card 3: Patients -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="2">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Total Patients" />
+                        <Label fx:id="totalPatientsLabel" styleClass="card-value" text="78" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="+8% from last month" />
+                    </VBox>
+
+                    <!-- Card 4: Sessions -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="3">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Total Sessions" />
+                        <Label fx:id="totalSessionsLabel" styleClass="card-value" text="356" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="+15% from last month" />
+                    </VBox>
+                </GridPane>
+
+                <!-- Second Row of Cards -->
+                <GridPane hgap="15" layoutX="20" layoutY="260" prefWidth="800" vgap="15" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+
+                    <!-- Card 5: Programs -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="0">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Total Programs" />
+                        <Label fx:id="totalProgramsLabel" styleClass="card-value" text="10" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="2 new programs" />
+                    </VBox>
+
+                    <!-- Card 6: Today's Sessions -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="1">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="Today's Sessions" />
+                        <Label fx:id="todaySessionsLabel" styleClass="card-value" text="12" />
+                        <Label style="-fx-text-fill: #2E3B55; -fx-font-size: 12px;" text="3 remaining today" />
+                    </VBox>
+
+                    <!-- Card 7: New Patients -->
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="card" GridPane.columnIndex="2">
+                        <padding>
+                            <Insets bottom="15" left="15" right="15" top="15" />
+                        </padding>
+                        <Label styleClass="card-title" text="New Patients This Week" />
+                        <Label fx:id="newPatientsLabel" styleClass="card-value" text="8" />
+                        <Label style="-fx-text-fill: #4CAF50; -fx-font-size: 12px;" text="+2 from last week" />
+                    </VBox>
+                </GridPane>
+
+                <!-- Charts Section -->
+                <GridPane hgap="15" layoutX="20" layoutY="380" prefWidth="800" vgap="15" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+
+                    <!-- Left Chart: User Distribution -->
+                    <VBox spacing="10" GridPane.columnIndex="0">
+                        <PieChart fx:id="userDistributionChart" legendVisible="true" prefHeight="250" prefWidth="390" title="User Distribution" />
+                    </VBox>
+
+                    <!-- Right Chart: Session Trends -->
+                    <VBox spacing="10" GridPane.columnIndex="1">
+                        <LineChart fx:id="sessionTrendChart" prefHeight="250" prefWidth="390" title="Session Trends">
+                            <xAxis>
+                                <CategoryAxis label="Month" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Number of Sessions" />
+                            </yAxis>
+                        </LineChart>
+                    </VBox>
+                </GridPane>
+
+
+            </AnchorPane>
+        </ScrollPane>
+    </center>
+
+    <!-- Bottom Section: Footer -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #4682B4; -fx-padding: 10;">
+            <Label style="-fx-font-size: 12px; -fx-text-fill: white;" text="© 2025 Therapy Management System | All Rights Reserved" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

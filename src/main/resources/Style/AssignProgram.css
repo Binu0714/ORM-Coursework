@@ -1,0 +1,128 @@
+/* Main Application Styling */
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-background-color: white;
+}
+
+/* Main container styling */
+.anchor-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 10);
+}
+
+/* Header styling */
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.date-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Section headers */
+.section-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Form labels */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-radius: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.combo-box:hover {
+    -fx-border-color: #bdc3c7;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(three-pass-box, rgba(52,152,219,0.3), 5, 0, 0, 0);
+}
+
+/* Button styling */
+.primary-button {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #34495e;
+}
+
+.secondary-button {
+    -fx-background-color: #95a5a6;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10 5 10 5;
+}
+
+.table-view .column-header-background .label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 5 0 5 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3498db20;
+}
+
+/* Display labels */
+.display-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: semi-bold;
+}
+
+/* Spacing adjustments */
+.form-container {
+    -fx-spacing: 10;
+}
+
+.form-row {
+    -fx-spacing: 20;
+    -fx-alignment: center-left;
+}

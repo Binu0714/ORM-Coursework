@@ -1,0 +1,245 @@
+/* TherapistManage.css - Responsive CSS for Therapist Management Interface */
+
+/* Root and Global Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+}
+
+/* Main Background */
+.main-background {
+    -fx-background-color: #f5f7fa;
+}
+
+/* Header Styling */
+.header {
+    -fx-background-color: #3f51b5;
+    -fx-padding: 15px 25px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 3);
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Content Pane */
+.content-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-padding: 10px;
+}
+
+/* Form Field Styling */
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+.id-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3f51b5;
+    -fx-padding: 5px 0 0 0;
+}
+
+.input-field {
+    -fx-background-color: #f8f9fc;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #3f51b5;
+    -fx-background-color: white;
+}
+
+/* List View Styling */
+.list-view {
+    -fx-background-color: #f8f9fc;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 5px 10px;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+}
+
+/* Button Container */
+.button-container {
+    -fx-padding: 15px 0;
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+}
+
+/* Button Styles */
+.action-button {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50; /* Green */
+}
+
+.save-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.update-button {
+    -fx-background-color: #2196F3; /* Blue */
+}
+
+.update-button:hover {
+    -fx-background-color: #0b7dda;
+}
+
+.delete-button {
+    -fx-background-color: #f44336; /* Red */
+}
+
+.delete-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.reset-button {
+    -fx-background-color: #ff9800; /* Orange */
+}
+
+.reset-button:hover {
+    -fx-background-color: #e68a00;
+}
+
+.track-button {
+    -fx-background-color: #673AB7; /* Purple */
+}
+
+.track-button:hover {
+    -fx-background-color: #5e35b1;
+}
+
+/* Table Styling */
+.table-container {
+    -fx-padding: 0 0 10px 0;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3f51b5;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #3f51b5;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.placeholder-label {
+    -fx-text-fill: #757575;
+    -fx-font-style: italic;
+}
+
+/* Responsive Design Media Queries */
+/* For screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    .root {
+        -fx-font-size: 12px;
+    }
+
+    .title-label {
+        -fx-font-size: 20px;
+    }
+
+    .field-label {
+        -fx-font-size: 11px;
+    }
+
+    .id-label {
+        -fx-font-size: 14px;
+    }
+
+    .input-field {
+        -fx-padding: 8px;
+        -fx-font-size: 12px;
+    }
+
+    .action-button {
+        -fx-font-size: 11px;
+        -fx-padding: 8px 16px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 600px) {
+    .button-container {
+        -fx-spacing: 10px;
+    }
+
+    .action-button {
+        -fx-padding: 6px 12px;
+        -fx-font-size: 10px;
+    }
+
+    .table-view .table-cell {
+        -fx-padding: 6px;
+    }
+}
+
+/* Animation for button hover */
+.action-button {
+    -fx-transition: -fx-background-color 0.3s;
+}
+
+/* Shadow effects for hover state */
+.content-pane:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 12, 0, 0, 6);
+}

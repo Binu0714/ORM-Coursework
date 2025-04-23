@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="mainAnchorpane" prefHeight="600.0" prefWidth="800.0" styleClass="main-background" stylesheets="@../Style/login.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.LoginController">
+    <children>
+        <!-- Header section with logo and title -->
+        <AnchorPane prefHeight="100.0" styleClass="header-section" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/serantiImage.jpeg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="150.0" layoutY="30.0" styleClass="header-text" text="Therapy Management System" />
+            </children>
+        </AnchorPane>
+
+        <!-- Login Card - centered and responsive -->
+        <Rectangle arcHeight="30.0" arcWidth="30.0" height="400.0" layoutX="200.0" layoutY="120.0" styleClass="login-card" width="400.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+
+        <Label layoutX="325.0" layoutY="150.0" styleClass="login-title" text="Login" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="325.0" />
+
+        <Label layoutX="250.0" layoutY="220.0" styleClass="input-label" text="Username" AnchorPane.leftAnchor="250.0" />
+
+        <TextField fx:id="txtUsername" layoutX="250.0" layoutY="245.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter your username" styleClass="input-field" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+
+        <Label layoutX="250.0" layoutY="300.0" styleClass="input-label" text="Password" AnchorPane.leftAnchor="250.0" />
+
+        <PasswordField fx:id="txtPassword" layoutX="250.0" layoutY="325.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter your password" styleClass="input-field" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+
+        <TextField fx:id="txtSecondPassword" layoutX="250.0" layoutY="325.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter your password" styleClass="input-field" visible="false" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+
+        <CheckBox fx:id="showPasswordBox" layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#showPasswordBoxOnAction" styleClass="show-password" text="Show password" AnchorPane.leftAnchor="250.0" />
+
+        <Button fx:id="btnLogin" layoutX="325.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="50.0" prefWidth="150.0" styleClass="login-button" text="LOGIN" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="325.0" />
+
+        <!-- Footer -->
+        <Label layoutX="297.0" layoutY="556.0" prefWidth="300.0" styleClass="footer-text" text="© 2025 Therapy Management System" AnchorPane.bottomAnchor="28.799999999999955" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="203.0" />
+    </children>
+</AnchorPane>

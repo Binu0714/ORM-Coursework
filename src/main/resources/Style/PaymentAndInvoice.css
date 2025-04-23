@@ -1,0 +1,171 @@
+/* payment-invoice-styles.css */
+
+/* Root application styling */
+.root {
+    -fx-font-family: 'System';
+    -fx-background-color: #f5f5f5;
+}
+
+/* Main header styling */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Main content panel styling */
+.content-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 10);
+    -fx-padding: 20;
+}
+
+/* Form labels styling */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Value labels styling */
+.value-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+/* Text field styling */
+.text-field {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-background-color: #ffffff;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498db;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5 10;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #2c3e50;
+}
+
+/* Button styling */
+.button {
+    -fx-background-radius: 5;
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.save-button {
+    -fx-background-color: #2c3e50;
+}
+
+.save-button:hover {
+    -fx-background-color: #34495e;
+}
+
+.update-button {
+    -fx-background-color: #3498db;
+}
+
+.update-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.delete-button {
+    -fx-background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.invoice-button {
+    -fx-background-color: #27ae60;
+}
+
+.invoice-button:hover {
+    -fx-background-color: #219955;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 8;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f2f4f6;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3498db30;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Status indicators */
+.status-paid {
+    -fx-text-fill: #27ae60;
+    -fx-font-weight: bold;
+}
+
+.status-pending {
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+}
+
+.status-incomplete {
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+}
+
+/* Hover effects */
+.hover-effect:hover {
+    -fx-opacity: 0.8;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane stylesheets="@../Style/User.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.UserController">
+    <VBox styleClass="main-container">
+        <!-- Header section -->
+        <HBox styleClass="header-section">
+            <Label styleClass="title-label" text="User Role Management" />
+        </HBox>
+
+        <!-- Input fields section - Using GridPane for better responsiveness -->
+        <GridPane hgap="20" styleClass="input-grid" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.33" />
+                <ColumnConstraints percentWidth="33.33" />
+                <ColumnConstraints percentWidth="33.33" />
+            </columnConstraints>
+
+            <!-- First row -->
+            <VBox spacing="8" styleClass="input-container" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label styleClass="field-label" text="User ID:" />
+                <TextField fx:id="userIdField" promptText="User ID Value" styleClass="input-field" />
+            </VBox>
+
+            <VBox spacing="8" styleClass="input-container" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label styleClass="field-label" text="Name:" />
+                <TextField fx:id="nameField" promptText="Enter name" styleClass="input-field" />
+            </VBox>
+
+            <VBox spacing="8" styleClass="input-container" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                <Label styleClass="field-label" text="Password:" />
+                <TextField fx:id="passwordField" promptText="Enter password" styleClass="input-field" />
+            </VBox>
+
+            <!-- Second row -->
+            <VBox spacing="8" styleClass="input-container" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label styleClass="field-label" text="Email:" />
+                <TextField fx:id="emailField" promptText="Enter email" styleClass="input-field" />
+            </VBox>
+
+            <VBox spacing="8" styleClass="input-container" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label styleClass="field-label" text="Role:" />
+                <ComboBox fx:id="roleComboBox" styleClass="combo-box" />
+            </VBox>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Table -->
+        <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+            <TableView fx:id="userTable" onMouseClicked="#tblOnclicked" prefHeight="400.0" prefWidth="982.0">
+                <columns>
+                    <TableColumn fx:id="userIdColumn" prefWidth="122.39998662471771" text="User ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="221.59998321533203" text="Name" />
+                    <TableColumn fx:id="emailColumn" prefWidth="256.0" text="Email" />
+                    <TableColumn fx:id="roleColumn" prefWidth="388.79998779296875" text="User Role" />
+                </columns>
+                <placeholder>
+                    <Label styleClass="table-placeholder" text="No content in table" />
+                </placeholder>
+            </TableView>
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox styleClass="button-container">
+            <Button fx:id="saveButton" onAction="#handleSave" styleClass="action-button, save-button" text="Save" />
+            <Button fx:id="updateButton" onAction="#handleUpdate" styleClass="action-button, update-button" text="Update" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="action-button, delete-button" text="Delete" />
+            <Button fx:id="resetButton" onAction="#handleReset" styleClass="action-button, reset-button" text="Reset" />
+        </HBox>
+    </VBox>
+</StackPane>

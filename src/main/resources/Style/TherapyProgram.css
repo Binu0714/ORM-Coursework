@@ -1,0 +1,149 @@
+/* General styling */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #F5F5F5; /* Soft gray background */
+}
+
+/* Title styling */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A3C5A;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+/* Input container styling */
+.input-container {
+    -fx-alignment: center-left;
+}
+
+/* Field label styling */
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A3C5A;
+}
+
+/* Input field styling */
+.input-field {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #1A3C5A;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1A3C5A;
+    -fx-prompt-text-fill: #A9A9A9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* TextArea styling (for Description) */
+.input-field{
+    -fx-pref-height: 100px;
+    -fx-pref-width: 660px;
+}
+
+/* Table styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #1A3C5A;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4682B4;
+    -fx-background-radius: 8 8 0 0;
+    -fx-border-color: #1A3C5A;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #ADD8E6; /* Light blue for table rows */
+    -fx-border-color: #1A3C5A;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #B0E0E6; /* Slightly lighter blue for odd rows */
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #87CEEB; /* Sky blue on hover */
+}
+
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-text-fill: #1A3C5A;
+    -fx-font-size: 13px;
+}
+
+/* Placeholder styling */
+.placeholder-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-font-style: italic;
+}
+
+/* Button styling */
+.save-button {
+    -fx-background-color: #28A745;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 3);
+}
+
+.save-button:hover {
+    -fx-background-color: #218838;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 4);
+}
+
+.update-button {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 3);
+}
+
+.update-button:hover {
+    -fx-background-color: #0056B3;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 4);
+}
+
+.delete-button {
+    -fx-background-color: #DC3545;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 3);
+}
+
+.delete-button:hover {
+    -fx-background-color: #C82333;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 4);
+}

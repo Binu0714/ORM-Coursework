@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="702.0" style="-fx-background-color: #F5F5F5;" stylesheets="@../Style/TherapyProgram.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.TherapyProgramController">
+
+    <!-- Title -->
+    <Label prefHeight="54.0" prefWidth="701.0" styleClass="title-label" text="Therapy Program Management" />
+
+    <!-- Input Fields -->
+    <HBox alignment="CENTER" prefHeight="48.0" prefWidth="494.0" spacing="20" style="-fx-padding: 20;">
+        <VBox prefHeight="52.0" spacing="10" styleClass="input-container">
+            <Label styleClass="field-label" text="Program ID:" />
+            <TextField fx:id="programIdField" promptText="Enter program ID" styleClass="input-field" />
+        </VBox>
+        <VBox spacing="10" styleClass="input-container">
+            <Label styleClass="field-label" text="Name:" />
+            <TextField fx:id="nameField" promptText="Enter program name" styleClass="input-field" />
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="20" style="-fx-padding: 0 20 20 20;">
+        <VBox spacing="10" styleClass="input-container">
+            <Label styleClass="field-label" text="Duration:" />
+            <TextField fx:id="durationField" promptText="Enter duration" styleClass="input-field" />
+        </VBox>
+        <VBox spacing="10" styleClass="input-container">
+            <Label styleClass="field-label" text="Fee:" />
+            <TextField fx:id="feeField" promptText="Enter fee" styleClass="input-field" />
+        </VBox>
+    </HBox>
+
+             <VBox spacing="10" style="-fx-padding: 0 20 20 20;" styleClass="input-container">
+        <Label styleClass="field-label" text="Description:" />
+        <TextArea fx:id="descriptionField" prefHeight="55.0" prefWidth="234.0" promptText="Enter description" styleClass="input-field" />
+    </VBox>
+
+    <!-- Table -->
+    <TableView fx:id="programTable" onMouseClicked="#tblOnClicked" prefHeight="200.0" prefWidth="700.0" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="programIdColumn" prefWidth="100" text="Program ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="150" text="Name" />
+            <TableColumn fx:id="feeColumn" prefWidth="100" text="Fee" />
+            <TableColumn fx:id="durationColumn" prefWidth="100" text="Duration" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="250" text="Description" />
+        </columns>
+        <placeholder>
+            <Label styleClass="placeholder-label" text="No content in table" />
+        </placeholder>
+    </TableView>
+
+    <!-- Buttons -->
+    <HBox alignment="CENTER" prefHeight="29.0" prefWidth="700.0" spacing="20" style="-fx-padding: 20;">
+        <Button fx:id="saveButton" onAction="#handleSave" styleClass="save-button" text="Save" />
+        <Button fx:id="updateButton" onAction="#handleUpdate" styleClass="update-button" text="Update" />
+        <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="delete-button" text="Delete" />
+      <Button fx:id="resest" layoutX="160.0" layoutY="30.0" onAction="#btnReset" styleClass="save-button" text="Reset" />
+    </HBox>
+
+</VBox>

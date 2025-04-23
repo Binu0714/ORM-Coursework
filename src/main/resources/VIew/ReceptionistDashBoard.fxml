@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="700.0" prefWidth="1116.0" stylesheets="@../Style/ReseptionistDashBoard.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.ReceptionistDashBoardController">
+    <children>
+        <!-- Side Navigation Panel -->
+        <VBox prefHeight="712.0" prefWidth="264.0" styleClass="side-panel">
+            <children>
+                <!-- Dashboard Header -->
+                <HBox alignment="CENTER" prefHeight="120.0" prefWidth="264.0" styleClass="sidebar-header">
+                    <children>
+                        <Label styleClass="sidebar-title" text="RECEPTIONIST">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <!-- Navigation Buttons -->
+                <Button fx:id="btnCredentialManage" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnCredentialManageOnAction" prefHeight="60.0" prefWidth="264.0" styleClass="nav-button" text="Credential Management">
+                    <padding>
+                        <Insets left="30.0" />
+                    </padding>
+                </Button>
+
+                <Button fx:id="btnPatientManage" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnPatientManageOnAction" prefHeight="60.0" prefWidth="264.0" styleClass="nav-button" text="Patient Management">
+                    <padding>
+                        <Insets left="30.0" />
+                    </padding>
+                </Button>
+
+                <Button fx:id="btnTherapySessionScheduling" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnTherapySessionSchedulingOnAction" prefHeight="60.0" prefWidth="264.0" styleClass="nav-button" text="Therapy Session Scheduling" wrapText="true">
+                    <padding>
+                        <Insets left="30.0" />
+                    </padding>
+                </Button>
+
+                <Button fx:id="btnPaymentInvoiceManage" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnPaymentInvoiceManageOnAction" prefHeight="60.0" prefWidth="264.0" styleClass="nav-button" text="Payment &amp; Invoice" wrapText="true">
+                    <padding>
+                        <Insets left="30.0" />
+                    </padding>
+                </Button>
+
+                <Button fx:id="btnReportingAnalytics" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnReportingAnalyticsOnAction" prefHeight="60.0" prefWidth="264.0" styleClass="nav-button" text="Reporting &amp; Analytics" wrapText="true">
+                    <padding>
+                        <Insets left="30.0" />
+                    </padding>
+                </Button>
+
+                <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+
+                <Button fx:id="btnLogout" alignment="CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="50.0" prefWidth="200.0" styleClass="logout-button" text="LOG OUT">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="30.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+
+        <!-- Main Content Area -->
+        <AnchorPane fx:id="subAnchorPaneOne" layoutX="264.0" layoutY="70.0" prefHeight="630.0" prefWidth="852.0" styleClass="content-area">
+            <children>
+                <!-- Dashboard Title -->
+                <Label fx:id="lblDashboardTitle" layoutX="40.0" layoutY="40.0" styleClass="page-title" text="Welcome to Your Dashboard">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="40.0" layoutY="80.0" styleClass="subtitle" text="Here's your daily overview">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+
+                <!-- Dashboard Stats - First Row -->
+                <HBox layoutX="40.0" layoutY="150.0" prefHeight="120.0" prefWidth="770.0" spacing="30.0">
+                    <children>
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="TOTAL PATIENTS">
+                                </Label>
+                                <Label fx:id="lblTotalPatients" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="78">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="+12% from last month">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="TODAY'S APPOINTMENTS">
+                                </Label>
+                                <Label fx:id="lblTodaysAppointments" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="12">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="3 morning, 9 afternoon">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="PENDING PAYMENTS">
+                                </Label>
+                                <Label fx:id="lblPendingPayments" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="5">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="+2% from last month">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+
+                <!-- Dashboard Stats - Second Row -->
+                <HBox layoutX="40.0" layoutY="300.0" prefHeight="120.0" prefWidth="770.0" spacing="30.0">
+                    <children>
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="TOTAL SESSIONS">
+                                </Label>
+                                <Label fx:id="lblTotalSessions" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="356">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="Since January 2025">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="NEW PATIENTS TODAY">
+                                </Label>
+                                <Label fx:id="lblTodaysNewPatients" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="3">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="Intake forms completed">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <AnchorPane prefHeight="120.0" prefWidth="240.0" styleClass="stat-card">
+                            <children>
+                                <Label layoutX="20.0" layoutY="20.0" styleClass="stat-label" text="AVAILABLE THERAPISTS">
+                                </Label>
+                                <Label fx:id="lblAvailableTherapists" layoutX="20.0" layoutY="50.0" styleClass="stat-value" text="8">
+                                </Label>
+                                <Label layoutX="20.0" layoutY="85.0" styleClass="stat-change" text="2 on leave today">
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+
+                <!-- Quick Actions Section -->
+                <Label layoutX="40.0" layoutY="450.0" styleClass="section-title" text="Quick Actions">
+                </Label>
+
+                <HBox layoutX="40.0" layoutY="490.0" prefHeight="80.0" prefWidth="770.0" spacing="20.0">
+                    <children>
+                        <Button prefHeight="80.0" prefWidth="180.0" styleClass="action-button" text="Add New Patient" />
+                        <Button prefHeight="80.0" prefWidth="180.0" styleClass="action-button" text="Schedule Session" />
+                        <Button prefHeight="80.0" prefWidth="161.0" styleClass="action-button" text="Process Payment" />
+                        <Button prefHeight="80.0" prefWidth="203.0" styleClass="action-button" text="View Today's Schedule" />
+                    </children>
+                </HBox>
+
+                <!-- Footer -->
+                <HBox alignment="CENTER" layoutY="590.0" prefHeight="40.0" prefWidth="852.0" styleClass="footer">
+                    <children>
+                        <Label styleClass="footer-text" text="© 2025 Therapy Management System | All Rights Reserved" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+
+        <!-- Top Bar -->
+        <HBox alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="70.0" prefWidth="852.0" styleClass="top-bar">
+            <children>
+                <Label styleClass="welcome-text" text="Welcome back, ">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="lblReceptionistName" styleClass="receptionist-name" text="Sandaru Perera">
+                    <HBox.margin>
+                        <Insets right="40.0" />
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="lblCurrentDate" styleClass="date-display" text="April 16, 2025">
+                    <HBox.margin>
+                        <Insets right="40.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

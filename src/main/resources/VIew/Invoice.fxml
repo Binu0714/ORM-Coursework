@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" stylesheets="@../Style/Invoice.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.InvoiceController">
+    <children>
+        <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="640.0" prefWidth="540.0" styleClass="invoice-container" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <top>
+                <!-- Header -->
+                <VBox spacing="5.0" styleClass="invoice-header" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label styleClass="invoice-title" text="INVOICE">
+                                    <padding>
+                                        <Insets bottom="5.0" top="20.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label styleClass="hospital-name" text="Serenity Mental Health Hospital" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label styleClass="hospital-address" text="123 Healing Street, Wellness District" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label styleClass="hospital-contact" text="Phone: (123) 456-7890 | Email: contact@serenityhospital.com">
+                                    <padding>
+                                        <Insets bottom="15.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <Separator styleClass="separator" />
+                    </children>
+                </VBox>
+            </top>
+
+            <center>
+                <!-- Invoice Content -->
+                <VBox styleClass="content-area" BorderPane.alignment="CENTER">
+                    <children>
+                        <!-- Invoice Number and Date -->
+                        <HBox spacing="50.0" styleClass="invoice-info-box">
+                            <children>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <Label styleClass="label-title" text="Invoice #:" />
+                                        <Label styleClass="invoice-number" text="INV-2025-0423" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <Label styleClass="label-title" text="Date:" />
+                                        <Label fx:id="lblInvoiceDate" prefHeight="20.0" prefWidth="128.0" styleClass="label-value" />
+                                    </children>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                        </HBox>
+
+                        <!-- Patient Information -->
+                        <VBox spacing="10.0" styleClass="section-container">
+                            <children>
+                                <Label styleClass="section-title" text="PATIENT INFORMATION" />
+
+                                <GridPane styleClass="info-grid">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label styleClass="label-title" text="Patient ID:" GridPane.rowIndex="0" />
+                                        <Label fx:id="lblPatientId" prefHeight="18.0" prefWidth="254.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                        <Label styleClass="label-title" text="Name:" GridPane.rowIndex="1" />
+                                        <Label fx:id="lblPatientName" prefHeight="18.0" prefWidth="265.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Session and Program Details -->
+                        <VBox spacing="10.0" styleClass="section-container">
+                            <children>
+                                <Label styleClass="section-title" text="SESSION DETAILS" />
+
+                                <GridPane styleClass="info-grid">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label styleClass="label-title" text="Program:" GridPane.rowIndex="0" />
+                                        <Label fx:id="lblProgramName" prefHeight="18.0" prefWidth="284.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                        <Label styleClass="label-title" text="Session ID:" GridPane.rowIndex="1" />
+                                        <Label fx:id="lblSessionId" prefHeight="18.0" prefWidth="278.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                        <Label styleClass="label-title" text="Session Date:" GridPane.rowIndex="2" />
+                                        <Label fx:id="lblSessionDate" prefHeight="18.0" prefWidth="276.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Payment Details -->
+                        <VBox spacing="10.0" styleClass="section-container">
+                            <children>
+                                <Label styleClass="section-title" text="PAYMENT DETAILS" />
+
+                                <GridPane styleClass="info-grid">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label styleClass="label-title" text="Payment Date:" GridPane.rowIndex="0" />
+                                        <Label fx:id="lblPaymentDate" prefHeight="18.0" prefWidth="272.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                        <Label styleClass="label-title" text="Fee:" GridPane.rowIndex="1" />
+                                        <Label fx:id="lblPaymentFee" prefHeight="18.0" prefWidth="308.0" styleClass="label-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                        <Label styleClass="label-title" text="Status:" GridPane.rowIndex="2" />
+                                        <Label fx:id="lblStatus" prefHeight="18.0" prefWidth="261.0" styleClass="status-paid" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Additional Information -->
+                        <VBox spacing="8.0">
+                            <children>
+                                <Label styleClass="footer-text" text="Thank you for choosing Serenity Mental Health Hospital. We appreciate your trust in our services." wrapText="true" />
+                                <Label styleClass="footer-text" text="For any queries related to this invoice, please contact our billing department." wrapText="true" />
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                    </padding>
+                </VBox>
+            </center>
+
+            <bottom>
+                <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label styleClass="footer-text" text="© 2025 Serenity Mental Health Hospital. All rights reserved." />
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" />
+                    </padding>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

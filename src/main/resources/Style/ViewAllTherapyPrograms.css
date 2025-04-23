@@ -1,0 +1,127 @@
+/* Main Styles for Patients in All Programs View */
+.root {
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Header Styling */
+.header-label {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 3);
+}
+
+/* Description Section */
+.description-section {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 3);
+}
+
+/* Subtitle Label */
+.subtitle-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Description Text */
+.description-text {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 12px;
+    -fx-wrap-text: true;
+}
+
+/* TableView Styling */
+.patients-table {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-padding: 0;
+}
+
+.patients-table .column-header-background {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-padding: 5px 0;
+}
+
+.patients-table .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-size: 45px;
+    -fx-alignment: center-left;
+}
+
+.patients-table .table-cell {
+    -fx-padding: 10px 15px;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+}
+
+.patients-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #ecf0f1;
+    -fx-table-cell-border-color: #ecf0f1;
+}
+
+.patients-table .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.patients-table .table-row-cell:selected {
+    -fx-background-color: #d6eaf8;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Main Container */
+.anchor-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 10);
+    -fx-padding: 20px;
+}
+
+/* Hover effect for the table rows */
+.patients-table .table-row-cell:hover {
+    -fx-background-color: #ebf5fb;
+}
+
+/* Additional styling for the table - visual improvements */
+.patients-table .scroll-bar:vertical {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.patients-table .scroll-bar:horizontal {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 0 0 8px 8px;
+}
+
+.patients-table .increment-button,
+.patients-table .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.patients-table .scroll-bar:vertical .thumb,
+.patients-table .scroll-bar:horizontal .thumb {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 5px;
+}
+
+.patients-table .scroll-bar:vertical .thumb:hover,
+.patients-table .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #95a5a6;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="416.0" prefWidth="800.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.ViewAllTherapyProgramsController">
+    <!-- Add the stylesheet reference -->
+    <stylesheets>
+        <URL value="@../Style/ViewAllTherapyPrograms.css" />
+    </stylesheets>
+
+    <children>
+        <!-- Header -->
+        <Label layoutX="260.0" layoutY="36.0" styleClass="header-label" text="Patients in All Programs">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Description -->
+        <VBox layoutX="111.0" layoutY="100.0" spacing="10.0" styleClass="description-section">
+            <children>
+                <Label styleClass="subtitle-label" text="Overview of Patients Enrolled in Multiple Therapy Programs">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label styleClass="description-text" text="This view displays all patients and their current program enrollments across different therapy programs." wrapText="true">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Patients in All Programs Table -->
+        <TableView fx:id="tblPatients" layoutX="30.0" layoutY="178.0" prefHeight="207.0" prefWidth="740.0" styleClass="patients-table">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="162.39996337890625" text="Patient ID" />
+                <TableColumn fx:id="colName" prefWidth="233.59991455078125" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="199.20001220703125" text="Email" />
+                <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="140.800048828125" text="Enrollment Date" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="852.0" styleClass="content-area" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.orm.service.orm_final_course_work_health_care.Controllers.ReportAndAnalyzeController">
+    <children>
+        <!-- Page Title -->
+        <Label layoutX="40.0" layoutY="40.0" styleClass="page-title" text="Reports and Analytics">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="40.0" layoutY="80.0" styleClass="subtitle" text="Analyze performance and track statistics">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <!-- Main Content Panel -->
+        <AnchorPane layoutX="40.0" layoutY="120.0" prefHeight="508.0" prefWidth="795.0" styleClass="analytics-panel">
+            <children>
+                <!-- Section 1: Therapist Performance Analysis -->
+                <VBox layoutX="20.0" layoutY="20.0" prefHeight="250.0" prefWidth="735.0" spacing="20.0" styleClass="section-box">
+                    <children>
+                        <Label styleClass="section-title" text="Therapist Performance Analysis">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Therapist Selection Controls -->
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="control-row">
+                            <children>
+                                <Label styleClass="field-label" text="Therapist ID:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="cmbTherapistId" onAction="#cmbTherapistIdOnAction" prefWidth="150.0" styleClass="form-control" />
+
+                                <Label styleClass="field-label" text="Name:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="lblTherapistName" prefHeight="35.0" prefWidth="234.0" styleClass="data-display">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="control-row">
+                            <children>
+                                <Label styleClass="field-label" text="Program:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="cmbProgramName" prefHeight="35.0" prefWidth="250.0" styleClass="form-control" />
+
+                                <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="35.0" prefWidth="120.0" styleClass="search-button" text="SEARCH">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+
+                        <!-- Bar Chart for Therapist Performance -->
+                        <AnchorPane prefHeight="180.0" prefWidth="735.0" styleClass="chart-container" />
+                          <BarChart fx:id="barChartPerformance" barGap="0.0" categoryGap="70.0" prefHeight="235.0" prefWidth="735.0" styleClass="performance-chart">
+                              <xAxis>
+                                  <CategoryAxis fx:id="X" label="Session Status" side="BOTTOM" />
+                              </xAxis>
+                              <yAxis>
+                                  <NumberAxis fx:id="Y" label="Number of Sessions" minorTickCount="2" minorTickLength="2.0" prefHeight="129.0" prefWidth="39.0" side="LEFT" tickLabelGap="4.0" tickLength="2.0" tickUnit="2.0" upperBound="12.5" />
+                              </yAxis>
+                          </BarChart>
+                    </children>
+                </VBox>
+
+                <!-- Section 2: Therapy Session Statistics -->
+                <VBox layoutX="14.0" layoutY="340.0" prefHeight="158.0" prefWidth="735.0" spacing="15.0" styleClass="section-box">
+                    <children>
+                        <Label styleClass="section-title" text="Therapy Session Statistics">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Table View for Session Statistics -->
+                        <TableView fx:id="tblSessionStats" prefHeight="108.0" prefWidth="735.0" style="-fx-background-color: white;" styleClass="data-table">
+                            <columns>
+                                <TableColumn fx:id="colProgramId" prefWidth="85.0" text="Program ID" />
+                                <TableColumn fx:id="colProgramName" prefWidth="180.0" text="Program Name" />
+                                <TableColumn fx:id="colCompletedCount" prefWidth="120.0" text="Completed" />
+                                <TableColumn fx:id="colBookingCount" prefWidth="100.0" text="Booked" />
+                                <TableColumn fx:id="colRescheduleCount" prefWidth="120.0" text="Rescheduled" />
+                                <TableColumn fx:id="colCancelledCount" prefWidth="120.0" text="Cancelled" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            <Button fx:id="btnhistory" layoutX="522.0" layoutY="498.0" mnemonicParsing="false" onAction="#historyonAction" prefHeight="26.0" prefWidth="218.0" style="-fx-background-color: FF0B55;" text="View Patient History" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </AnchorPane>
+    </children>
+</AnchorPane>
